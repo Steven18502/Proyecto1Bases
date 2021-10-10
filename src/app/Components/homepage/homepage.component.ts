@@ -1,5 +1,5 @@
 import { Component, OnInit, Output,EventEmitter } from '@angular/core';
-import { LoginComponent } from '../login/login.component';
+import { CinetecService } from 'src/app/cinetec.service';
 
 
 @Component({
@@ -9,18 +9,19 @@ import { LoginComponent } from '../login/login.component';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
-  @Output() sendRuta = new EventEmitter<string>();
-  setRuta:string = "/empleados";
+  constructor(private service:CinetecService) { }
+  usuario:string = "";
   ngOnInit(): void {
   }
   
   setUserType(type:number){
-    if (type == 0){
-      this.sendRuta.emit("/salas")
-    }
     if (type == 1){
-      this.sendRuta.emit("/empleados")
+      this.usuario = "Admin"
+      this.service.setUsuario(this.usuario)
+    }
+    if (type == 0){
+      this.usuario = "Cliente"
+      this.service.setUsuario(this.usuario)
     }
   }
 }

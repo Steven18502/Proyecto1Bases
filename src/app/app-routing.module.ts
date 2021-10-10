@@ -1,3 +1,4 @@
+import { ExitpageComponent } from './Components/exitpage/exitpage.component';
 import { AsientosComponent } from './Components/asientos/asientos.component';
 import { ProyeccionComponent } from './Components/proyeccion/proyeccion.component';
 import { CinemaComponent } from './Components/cinema/cinema.component';
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: "asientos",
     component: AsientosComponent
+  },
+  {
+    path: "salida",
+    component: ExitpageComponent
   },
 ];
 

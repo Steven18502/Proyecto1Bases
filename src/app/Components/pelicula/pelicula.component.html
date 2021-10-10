@@ -1,5 +1,6 @@
 <app-header></app-header>
 <app-breadcrumb></app-breadcrumb>
+<app-clientinfo></app-clientinfo>
 <section id = "seleccionar">
     <h4>Seleccione una Película</h4>
     <br>
@@ -10,7 +11,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{pelicula}}</h5>
                   <p class="card-text">Protagonistas:.... <p> Director:......</p>
-                  <button  class="btn btn-primary">Seleccionar</button>
+                  <button  class="btn btn-primary" (click)="seleccionarPelicula(pelicula)">Seleccionar</button>
                 </div>
             </div>
         </div>

@@ -19,6 +19,8 @@ import { BreadcrumbComponent } from './Components/breadcrumb/breadcrumb.componen
 import { PeliculaComponent } from './Components/pelicula/pelicula.component';
 import { ProyeccionComponent } from './Components/proyeccion/proyeccion.component';
 import { AsientosComponent } from './Components/asientos/asientos.component';
+import { ClientinfoComponent } from './Components/clientinfo/clientinfo.component';
+import { ExitpageComponent } from './Components/exitpage/exitpage.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AsientosComponent } from './Components/asientos/asientos.component';
     BreadcrumbComponent,
     PeliculaComponent,
     ProyeccionComponent,
-    AsientosComponent
+    AsientosComponent,
+    ClientinfoComponent,
+    ExitpageComponent
   ],
   imports: [
     BrowserModule,

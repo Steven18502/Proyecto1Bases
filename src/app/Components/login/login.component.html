@@ -12,5 +12,7 @@
         <br>
         <button id = "btn-inicio" routerLink={{ruta}}>Iniciar</button>
         <br>
-        <a id = "reg-link" routerLink="/register">Registrarse</a>
+        <div *ngIf="usuarioCliente">
+            <a id = "reg-link" routerLink="/register">Registrarse</a>
+        </div>
     </section>

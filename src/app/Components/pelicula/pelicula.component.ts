@@ -1,3 +1,4 @@
+import { CinetecService } from 'src/app/cinetec.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class PeliculaComponent implements OnInit {
 
   peliculas:string[] = ["Scary Movie","Avengers","Venom","El Santo","Jumanji"]; 
+  pelicula_actual:string = "";
 
-  constructor() { }
+  constructor(private service:CinetecService) { }
 
   ngOnInit(): void {
   }
 
+  seleccionarPelicula(pelicula:string){
+    this.pelicula_actual = pelicula;
+    this.service.setPelicula(this.pelicula_actual);
+  }
 }
