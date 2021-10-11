@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "iMofnwxs9DoMa7CV2+47ogIt979VoNLSBkWW9FoWZ7BNyiuemTp2hyC6JExLiwA/Jv8Bys3ahF9ErMTyDx1GNA==",
+  "success": true,
+  "projectFilePath": "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases/Proyecto1Bases.csproj",
+  "expectedPackageFiles": [
+    "/home/chago/.nuget/packages/microsoft.aspnetcore.spaservices.extensions/5.0.10/microsoft.aspnetcore.spaservices.extensions.5.0.10.nupkg.sha512",
+    "/home/chago/.nuget/packages/microsoft.extensions.fileproviders.abstractions/5.0.0/microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+    "/home/chago/.nuget/packages/microsoft.extensions.fileproviders.physical/5.0.0/microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
+    "/home/chago/.nuget/packages/microsoft.extensions.filesystemglobbing/5.0.0/microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
+    "/home/chago/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
