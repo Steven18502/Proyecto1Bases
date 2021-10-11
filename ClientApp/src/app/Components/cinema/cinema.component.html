@@ -1,0 +1,21 @@
+<app-header></app-header>
+<app-breadcrumb></app-breadcrumb>
+<section id = "seleccionar">
+    <h4>Seleccione uno de nuestros cines</h4>
+    <br>
+    <h6 style="margin-left: 38%;">{{cinema_actual}}</h6>
+    <br>
+    <div class="dropdown">
+        <button  style="margin-left: 30%;" class="btn btn-danger btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          *Seleccionar*
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" >
+            <li *ngFor = "let cinema of cinemas">
+                <a class="dropdown-item" (click)="seleccionar(cinema)">{{cinema}}</a>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <button id = "btn-siguiente" routerLink="/pelicula">Siguiente</button>
+</section>

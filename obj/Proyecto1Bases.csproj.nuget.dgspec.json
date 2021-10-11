@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases/Proyecto1Bases.csproj": {}
+    "/home/chago/Documents/Bases/Proyecto1Bases/Proyecto1Bases.csproj": {}
   },
   "projects": {
-    "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases/Proyecto1Bases.csproj": {
+    "/home/chago/Documents/Bases/Proyecto1Bases/Proyecto1Bases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases/Proyecto1Bases.csproj",
+        "projectUniqueName": "/home/chago/Documents/Bases/Proyecto1Bases/Proyecto1Bases.csproj",
         "projectName": "Proyecto1Bases",
-        "projectPath": "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases/Proyecto1Bases.csproj",
+        "projectPath": "/home/chago/Documents/Bases/Proyecto1Bases/Proyecto1Bases.csproj",
         "packagesPath": "/home/chago/.nuget/packages/",
-        "outputPath": "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases/obj/",
+        "outputPath": "/home/chago/Documents/Bases/Proyecto1Bases/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/chago/.nuget/NuGet/NuGet.Config"
@@ -41,6 +41,24 @@
             "Microsoft.AspNetCore.SpaServices.Extensions": {
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             }
           },
           "imports": [

@@ -1,0 +1,23 @@
+cd ClientApp
+npm install
+cd ..
+
+To use Entity Framework Core with a SQL Server database, run the following dotnet CLI command:
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+To add support for an InMemory data source, for testing:
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+
+install entity framework
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 5.0.2
+
+install dotnet-ef tool, to use dotnet migrations
+dotnet tool install --global dotnet-ef
+
+install the entityframework design
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.5
+
+Time to add our initial migration. Run this command to the terminal.
+The migrations feature in EF Core provides a way to incrementally update the database schema to keep it in sync with the application's data model while preserving existing data in the database.
+Sometimes is necesarly to restart the IDE	
+dotnet ef migrations add InitialMigration

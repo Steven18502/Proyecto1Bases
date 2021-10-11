@@ -1,34 +1,51 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { HomepageComponent } from './Components/homepage/homepage.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { LoginComponent } from './Components/login/login.component';
+import { RegisterComponent } from './Components/register/register.component';
+import { EmpleadosComponent } from './Components/empleados/empleados.component';
+import { ClientesComponent } from './Components/clientes/clientes.component';
+import { PeliculasComponent } from './Components/peliculas/peliculas.component';
+import { SucursalesComponent } from './Components/sucursales/sucursales.component';
+import { SalasComponent } from './Components/salas/salas.component';
+import { CinemaComponent } from './Components/cinema/cinema.component';
+import { BreadcrumbComponent } from './Components/breadcrumb/breadcrumb.component';
+import { PeliculaComponent } from './Components/pelicula/pelicula.component';
+import { ProyeccionComponent } from './Components/proyeccion/proyeccion.component';
+import { AsientosComponent } from './Components/asientos/asientos.component';
+import { PeliculasService } from './Components/peliculas/peliculas.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent
+    HomepageComponent,
+    NavbarComponent,
+    HeaderComponent,
+    LoginComponent,
+    RegisterComponent,
+    EmpleadosComponent,
+    ClientesComponent,
+    PeliculasComponent,
+    SucursalesComponent,
+    SalasComponent,
+    CinemaComponent,
+    BreadcrumbComponent,
+    PeliculaComponent,
+    ProyeccionComponent,
+    AsientosComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-    ])
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PeliculasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

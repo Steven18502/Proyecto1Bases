@@ -5,6 +5,11 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Proyecto1Bases.Data;
+using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
+using Proyecto1Bases.Repositories;
 
 namespace Proyecto1Bases
 {
@@ -19,13 +24,17 @@ namespace Proyecto1Bases
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddControllersWithViews();
-            // In production, the Angular files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
+        {   
+            services.AddDbContext<DataContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IDataContext>(provider => provider.GetService<DataContext>());
+            services.AddScoped<IPeliculaRepository, PeliculaRepository>();
+            services.AddControllers();
+
+            services.AddSwaggerGen(c =>
             {
-                configuration.RootPath = "ClientApp/dist";
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Proyecto1Bases", Version = "v1" });
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,16 @@
+.btn-vistas{
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 5px 10px;  
+    text-align: center;
+}
+
+#box{
+    background-color: seagreen;
+    display: inline-block;
+    padding: 15px 15px;
+    margin-left: 45%;
+    border-radius: 10px;
+    margin-top: 15%;
+}
