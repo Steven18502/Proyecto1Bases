@@ -28,6 +28,11 @@ namespace Proyecto1Bases
             services.AddDbContext<DataContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IDataContext>(provider => provider.GetService<DataContext>());
             services.AddScoped<IPeliculaRepository, PeliculaRepository>();
+            services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddScoped<IEmpleadoRepository, EmpleadoRepository>();
+            services.AddScoped<ISucursalRepository, SucursalRepository>();
+            services.AddScoped<ISalaRepository, SalaRepository>();
+
             services.AddControllers();
 
             services.AddSwaggerGen(c =>

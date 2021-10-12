@@ -14,5 +14,10 @@ namespace Proyecto1Bases.Data
         }
  
         public DbSet<Pelicula> Peliculas { get; init; }
+        public DbSet<Cliente> Clientes { get; init; }
+        public DbSet<Empleado> Empleados { get; init; }
+        public DbSet<Sucursal> Sucursales { get; init; }
+        public DbSet<Sala> Salas { get; init; }
+
     }
 }
