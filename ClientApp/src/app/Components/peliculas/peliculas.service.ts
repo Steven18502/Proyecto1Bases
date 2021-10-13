@@ -18,4 +18,9 @@ export class PeliculasService {
     return this.http.get<IPelicula[]>(this.url + "peliculas");
   }
 
+  // Metodo para crear una pelicula proveniente de la web
+  createPelicula(pelicula: IPelicula): Observable<IPelicula> {
+    return this.http.post<IPelicula>(this.url + "peliculas", pelicula);
+  }
+
 }

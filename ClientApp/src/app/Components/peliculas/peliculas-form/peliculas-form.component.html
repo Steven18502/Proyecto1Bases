@@ -1,0 +1,140 @@
+<h1>AgregarPelicula</h1>
+<form class="form-horizontal" novalidate
+        
+      (ngSubmit)="save()" [formGroup]="formGroup">
+  <fieldset>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.pnombre_original.touched || f.pnombre_original.dirty) && !f.pnombre_original.valid }">
+      <label class="col-md-2 control-label"
+             for="pnombre_originalId">Nombre Original</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="pnombre_originalId"
+               type="text"
+               required
+               formControlName="pnombre_original" />
+        <span class="help-block" *ngIf="(f.pnombre_original.touched || f.pnombre_original.dirty) && f.pnombre_original.errors">
+          <span *ngIf="f.pnombre_original.errors && f.pnombre_original.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.pnombre.touched || f.pnombre.dirty) && !f.pnombre.valid }">
+      <label class="col-md-2 control-label"
+             for="pnombreId">Nombre</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="nombreId"
+               type="text"
+               required
+               formControlName="pnombre" />
+        <span class="help-block" *ngIf="(f.pnombre.touched || f.pnombre.dirty) && f.pnombre.errors">
+          <span *ngIf="f.pnombre.errors && f.pnombre.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.pduracion.touched || f.pduracion.dirty) && !f.pduracion.valid }">
+      <label class="col-md-2 control-label"
+             for="pduracionId">Duración</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="duracionId"
+               type="text"
+               required
+               formControlName="pduracion" />
+        <span class="help-block" *ngIf="(f.pduracion.touched || f.pduracion.dirty) && f.pduracion.errors">
+          <span *ngIf="f.pduracion.errors && f.pduracion.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.director.touched || f.director.dirty) && !f.director.valid }">
+      <label class="col-md-2 control-label"
+             for="directorId">Director</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="directorId"
+               type="text"
+               required
+               formControlName="director" />
+        <span class="help-block" *ngIf="(f.director.touched || f.director.dirty) && f.director.errors">
+          <span *ngIf="f.director.errors && f.director.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.clasificacion.touched || f.clasificacion.dirty) && !f.clasificacion.valid }">
+      <label class="col-md-2 control-label"
+             for="clasificacionId">Clasificación</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="clasificacionId"
+               type="text"
+               required
+               formControlName="clasificacion" />
+        <span class="help-block" *ngIf="(f.clasificacion.touched || f.clasificacion.dirty) && f.clasificacion.errors">
+          <span *ngIf="f.clasificacion.errors && f.clasificacion.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.protagonistas.touched || f.protagonistas.dirty) && !f.protagonistas.valid }">
+      <label class="col-md-2 control-label"
+             for="protagonistasId">Protagonistas</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="protagonistasId"
+               type="text"
+               required
+               formControlName="protagonistas" />
+        <span class="help-block" *ngIf="(f.protagonistas.touched || f.protagonistas.dirty) && f.protagonistas.errors">
+          <span *ngIf="f.protagonistas.errors && f.protagonistas.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-4 col-md-offset-2">
+        <span>
+          <button class="btn btn-primary"
+                  type="submit"
+                  [disabled]="!formGroup.valid">
+            Guardar
+          </button>
+          <button class="btn"
+                  type="button"
+                  [routerLink]='["/peliculas"]'>
+            Cancelar
+          </button>
+        </span>
+
+      </div>
+
+    </div>
+  </fieldset>
+</form>

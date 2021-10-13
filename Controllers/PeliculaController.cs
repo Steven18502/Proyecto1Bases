@@ -51,19 +51,19 @@ namespace Proyecto1Bases.Controllers
                 protagonistas = createPeliculaDto.protagonistas,
                 pimagen = createPeliculaDto.pimagen
             };
-    
+            pelicula.pnombre_original = Guid.NewGuid().ToString();
             await _peliculaRepository.Add(pelicula);
             return Ok();
         }
     
-        [HttpDelete("api/{pnombre_original}")]
+        [HttpDelete("{pnombre_original}")]
         public async Task<ActionResult> DeletePelicula(string pnombre_original)
         {
             await _peliculaRepository.Delete(pnombre_original);
             return Ok();
         }
     
-        [HttpPut("api/{pnombre_original}")]
+        [HttpPut("{pnombre_original}")]
         public async Task<ActionResult> UpdatePelicula(string pnombre_original, UpdatePeliculaDto updatePeliculaDto)
         {
             Pelicula pelicula = new()

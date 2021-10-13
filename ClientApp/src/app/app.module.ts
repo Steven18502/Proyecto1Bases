@@ -20,6 +20,8 @@ import { PeliculaComponent } from './Components/pelicula/pelicula.component';
 import { ProyeccionComponent } from './Components/proyeccion/proyeccion.component';
 import { AsientosComponent } from './Components/asientos/asientos.component';
 import { PeliculasService } from './Components/peliculas/peliculas.service';
+import { PeliculasFormComponent } from './Components/peliculas/peliculas-form/peliculas-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,12 +40,14 @@ import { PeliculasService } from './Components/peliculas/peliculas.service';
     BreadcrumbComponent,
     PeliculaComponent,
     ProyeccionComponent,
-    AsientosComponent
+    AsientosComponent,
+    PeliculasFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [PeliculasService],
   bootstrap: [AppComponent]

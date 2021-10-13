@@ -30,7 +30,7 @@
                 <input type="file" class="form-control" id="inputGroupFile02">
             </div>
               <br>
-            <button id="btn-agregar" > Agregar </button>
+            <button [routerLink]='["/peliculas-agregar"]' id="btn-agregar" > Agregar </button>
             <br>
           </form>
         <section id ="gestionar" class="col">
@@ -67,7 +67,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let pelicula of peliculas">
-                                <td>{{pelicula.pnombreOriginal}}</td>
+                                <td>{{pelicula.pnombre_original}}</td>
                                 <td>{{pelicula.pnombre}}</td>
                                 <td>{{pelicula.pduracion}}</td>
                                 <td>{{pelicula.director}}</td>

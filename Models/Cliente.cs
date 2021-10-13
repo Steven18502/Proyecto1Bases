@@ -1,11 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Proyecto1Bases.Models
 {
     public class Cliente
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string ccedula { get; set; }
         public string cusuario { get; set; }
         public string cconstrasenia { get; set; }

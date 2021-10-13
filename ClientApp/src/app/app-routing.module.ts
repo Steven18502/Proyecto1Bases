@@ -12,6 +12,7 @@ import { HomepageComponent } from './Components/homepage/homepage.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PeliculaComponent } from './Components/pelicula/pelicula.component';
+import { PeliculasFormComponent } from './Components/peliculas/peliculas-form/peliculas-form.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: "peliculas",
     component: PeliculasComponent
+  },
+  {
+    path: "peliculas-agregar",
+    component: PeliculasFormComponent
   },
   {
     path: "sucursales",
