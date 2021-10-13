@@ -31,7 +31,7 @@ public class Peliculas extends AppCompatActivity {
         setContentView(R.layout.activity_peliculas);
 
         String cine = getIntent().getStringExtra("cine");
-        Toast.makeText(this, "Cine seleccionado: " + cine, Toast.LENGTH_SHORT ).show();
+        Toast.makeText(this, "Cine seleccionado:" + cine, Toast.LENGTH_SHORT ).show();
 
         spinner = (Spinner)findViewById(R.id.spinner);
         String [] opciones = MostrarPeliculas(cine);
