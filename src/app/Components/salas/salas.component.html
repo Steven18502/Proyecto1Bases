@@ -1,0 +1,67 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<body>
+<div class="container"> 
+    <h1>Salas</h1>
+    <div class="row justify-content-md-center">
+        <form id = "agregar" class="col-3" action="">
+            <h4>Agregar Sala</h4>
+            <br>
+            <div class="mb-4">
+                <input type="text"  class="form-control" id="exampleInputPassword1" placeholder="Identificador" name="1"> 
+            </div>
+            <div class="mb-4">
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Sucursal" name = "1" >
+            </div>
+            <div class="mb-4">
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cantidad de Filas"  name = "1" >
+            </div>
+            <div class="mb-4">
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cantidad de Columnas"  name = "1" >
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Aforo" aria-label="Username" aria-describedby="basic-addon1">
+                <span class="input-group-text" id="basic-addon1">%</span>
+            </div>
+              <br>
+            <button id="btn-agregar" > Agregar </button>
+            <br>
+          </form>
+        <section id ="gestionar" class="col">
+            <h4>Gestion de Salas</h4>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="exampleInputPassword1 Nombre" placeholder="Identificador"  name = "1" >
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Sucursal"  name = "1" >
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="C.Filas"  name = "1" >
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="C.Columnas"  name = "1" >
+                        <input type="text" class="form-control" placeholder="Aforo" aria-label="Username" aria-describedby="basic-addon1">
+                        <span class="input-group-text" id="basic-addon1">%</span>
+                        <button id="btn-editar" > Editar </button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text"  class="form-control" id="exampleInputPassword1 Nombre" placeholder="Identificador de la Sala"  name = "1" >
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre Original de la Película"  name = "1" >
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Hora de Proyección"  name = "1" >
+                    <button id="btn-editar" > Asignar </button>
+                  </div>
+                <br>
+                <div class="input-group">   
+                    <p style="margin-right: 30px;">Identificador</p>
+                    <p style="margin-right: 30px;">Sucursal</p>
+                    <p style="margin-right: 30px;">Cantidad de Filas</p>
+                    <p style="margin-right: 30px;">Cantidad de Columnas</p>
+                    <p style="margin-right: 30px;">% Aforo</p>
+                </div>
+                <br>
+
+            </div>
+            <br>
+        </section>
+    </div>
+</div>
+</body>
+

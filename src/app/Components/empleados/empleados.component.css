@@ -1,0 +1,35 @@
+#empleados{
+    background-color: seagreen;
+    display: inline-block;
+    padding: 15px 15px;
+    border-radius: 10px;
+    margin-top: 1%;
+}
+#gempleados{
+    background-color: seagreen;
+    display: inline-block;
+    padding: 15px 15px;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 80%;
+}
+#btn-agregar{
+    border-radius: 10px;
+    padding: 5px;
+    width: 75px;
+    margin-left: 75%;
+    text-align: center;
+}
+#btn-editar{
+    padding: 5px;
+    width: 68px;
+    height: 41px;
+    margin-left: 0%;
+    text-align: center;
+}
+.editar{
+    margin: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+}

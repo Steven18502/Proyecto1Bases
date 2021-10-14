@@ -1,0 +1,15 @@
+#seleccionar{
+    background-color: seagreen;
+    display: inline-block;
+    padding: 15px 15px;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.btn-mover{
+    border-radius: 10px;
+    padding: 5px;
+    width: 85px;
+    text-align: center;
+    margin-top: 100px;
+}

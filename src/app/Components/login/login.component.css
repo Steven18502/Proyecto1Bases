@@ -1,0 +1,19 @@
+#login{
+    background-color: seagreen;
+    display:inline-block;
+    padding: 15px 15px;
+    margin-left: 45%;
+    border-radius: 10px;
+    margin-top: 15%;
+}
+#btn-inicio{
+    border-radius: 10px;
+    padding: 5px;
+    width: 68px;
+    margin-left: 70%;
+    text-align: center;
+}
+#reg-link{
+    font-size: 15px;
+    color: white;
+}

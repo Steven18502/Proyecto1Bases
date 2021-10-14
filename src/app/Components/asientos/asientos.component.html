@@ -1,0 +1,35 @@
+<app-header></app-header>
+<app-breadcrumb></app-breadcrumb>
+<app-clientinfo></app-clientinfo>
+<body>
+    <section id = "seleccionar" >
+        <h4>Seleccione un Asiento</h4>
+        <br>
+        <div style="background-color:lightblue; text-align: center;">
+            <h5>Pantalla</h5>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row g-2 g-lg-3" *ngFor = "let fila of asientos; let posfila = index">
+              <div style="background-color: seagreen;" class="col" *ngFor = "let asiento of fila; let posasiento = index">
+                <div style="text-align: center;" class="p-3 border bg-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    <br>
+                    <div *ngIf = "asiento == 2; else elseBlock">     
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [disabled] = "true"  [checked] = "false">
+                    </div>
+                    <ng-template #elseBlock>     
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (click) = "seleccionar(posfila,posasiento)" [disabled] = "asiento"  [checked] = "asiento">
+                    </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class = "input-group">
+            <button class = "btn-mover" routerLink="/proyeccion">Regresar</button>
+            <button class = "btn-mover" (click)="finalizar()" routerLink = "/salida">Finalizar</button>
+        </div>
+    </section>
+</body>
