@@ -10,7 +10,7 @@ import { PeliculasService } from './peliculas.service';
 export class PeliculasComponent implements OnInit {
 
   // Listado de peliculas que se mostraran en la interfaz de usuario
-  peliculas: IPelicula[] = []; 
+  peliculas: IPelicula[] = [];  
 
   constructor(private peliculasService: PeliculasService) { }
 

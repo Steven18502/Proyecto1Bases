@@ -28,7 +28,7 @@ namespace Proyecto1Bases.Controllers
             return Ok(peliculas);
         }
     
-        [HttpGet("api/{pnombre_original}")]
+        [HttpGet("{pnombre_original}")]
         public async Task<ActionResult<Pelicula>> GetPelicula(string pnombre_original)
         {
             var pelicula = await _peliculaRepository.Get(pnombre_original);
@@ -51,7 +51,6 @@ namespace Proyecto1Bases.Controllers
                 protagonistas = createPeliculaDto.protagonistas,
                 pimagen = createPeliculaDto.pimagen
             };
-            pelicula.pnombre_original = Guid.NewGuid().ToString();
             await _peliculaRepository.Add(pelicula);
             return Ok();
         }

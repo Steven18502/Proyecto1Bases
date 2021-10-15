@@ -20,33 +20,44 @@
                 <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Fecha de Nacimiento"  name = "1" >
             </div>
               <br>
-            <button id="btn-agregar" > Agregar </button>
+              <button [routerLink]='["/clientes-agregar"]' id="btn-agregar" > Agregar </button>
             <br>
           </form>
         <section id ="gestionar" class="col">
             <h4>Gestion de Clientes</h4>
             <br>
-            <div class="container">
-                <div class="row">
-                    <div class="input-group">
-                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Nombre"  name = "1" >
-                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Cédula"  name = "1" >
-                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Teléfono"  name = "1" >
-                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Fecha de Nacimiento"  name = "1" >
-                        <button id="btn-editar" > Editar </button>
-                      </div>
-                </div>
-                <br>
-                <div class="input-group">   
-                    <p style="margin-right: 30px;">Nombre Completo</p>
-                    <p style="margin-right: 30px;">Cédula</p>
-                    <p style="margin-right: 30px;">Teléfono</p>
-                    <p style="margin-right: 30px;">Fecha de Nacimiento</p>
-                    <p style="margin-right: 30px;">Edad</p>
-                </div>
-                <br>
+                <p *ngIf="!(clientes && clientes.length)">
+                    No existen registros para mostrar
+                </p>
+                <table class="table" *ngIf="clientes && clientes.length">
+                    <thead>
+                        <tr>
+                            <th>Cédula</th>
+                            <th>Usuario</th>
+                            <th>Contraseña</th>
+                            <th>Nombre Completo</th>
+                            <th>Edad</th>
+                            <th>Fecha de nacimiento</th>
+                            <th>Teléfono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cliente of clientes">
+                            <td>{{cliente.ccedula}}</td>
+                            <td>{{cliente.cusuario}}</td>
+                            <td>{{cliente.ccontrasenia}}</td>
+                            <td>{{cliente.cnombre_completo}}</td>
+                            <td>{{cliente.cedad}}</td>
+                            <td>{{cliente.cfecha_nacimiento}}</td>
+                            <td>{{cliente.ctelefono}}</td>
+                            <td>
+                                <button class="btn btn-primary" [routerLink]='["/clientes-editar/" + cliente.ccedula]'>Editar</button>
+                                <button class ="btn btn-danger">Borrar</button>
+                            </td>
+                        </tr>
+                    </tbody>
 
-            </div>
+                </table>
             <br>
         </section>
     </div>

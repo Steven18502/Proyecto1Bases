@@ -1,3 +1,4 @@
+import { ExitpageComponent } from './Components/exitpage/exitpage.component';
 import { AsientosComponent } from './Components/asientos/asientos.component';
 import { ProyeccionComponent } from './Components/proyeccion/proyeccion.component';
 import { CinemaComponent } from './Components/cinema/cinema.component';
@@ -13,6 +14,7 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PeliculaComponent } from './Components/pelicula/pelicula.component';
 import { PeliculasFormComponent } from './Components/peliculas/peliculas-form/peliculas-form.component';
+import { ClientesFormComponent } from './Components/clientes/clientes-form/clientes-form.component';
 
 const routes: Routes = [
   {
@@ -32,11 +34,19 @@ const routes: Routes = [
     component: ClientesComponent
   },
   {
+    path: "clientes-agregar",
+    component: ClientesFormComponent
+  },
+  {
     path: "peliculas",
     component: PeliculasComponent
   },
   {
     path: "peliculas-agregar",
+    component: PeliculasFormComponent
+  },
+  {
+    path: "peliculas-editar/:id",
     component: PeliculasFormComponent
   },
   {
@@ -66,6 +76,10 @@ const routes: Routes = [
   {
     path: "asientos",
     component: AsientosComponent
+  },
+  {
+    path: "salida",
+    component: ExitpageComponent
   },
 ];
 

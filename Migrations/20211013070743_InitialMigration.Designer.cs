@@ -10,7 +10,7 @@ using Proyecto1Bases.Data;
 namespace Proyecto1Bases.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211012180733_InitialMigration")]
+    [Migration("20211013070743_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

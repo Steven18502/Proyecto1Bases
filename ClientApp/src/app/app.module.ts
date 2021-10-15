@@ -1,3 +1,4 @@
+import { PeliculasFormComponent } from './Components/peliculas/peliculas-form/peliculas-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,7 +21,9 @@ import { PeliculaComponent } from './Components/pelicula/pelicula.component';
 import { ProyeccionComponent } from './Components/proyeccion/proyeccion.component';
 import { AsientosComponent } from './Components/asientos/asientos.component';
 import { PeliculasService } from './Components/peliculas/peliculas.service';
-import { PeliculasFormComponent } from './Components/peliculas/peliculas-form/peliculas-form.component';
+import { ClientesFormComponent } from './Components/clientes/clientes-form/clientes-form.component';
+import { ClientinfoComponent } from './Components/clientinfo/clientinfo.component';
+import { ExitpageComponent } from './Components/exitpage/exitpage.component'
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -41,7 +44,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     PeliculaComponent,
     ProyeccionComponent,
     AsientosComponent,
-    PeliculasFormComponent
+    PeliculasFormComponent,
+    ClientesFormComponent,
+    AsientosComponent,
+    ClientinfoComponent,
+    ExitpageComponent
   ],
   imports: [
     BrowserModule,

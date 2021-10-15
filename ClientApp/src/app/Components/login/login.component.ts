@@ -1,5 +1,5 @@
+import { CinetecService } from './../../cinetec.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { HomepageComponent } from '../homepage/homepage.component';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +8,27 @@ import { HomepageComponent } from '../homepage/homepage.component';
 })
 export class LoginComponent implements OnInit {
   
-  @Input() ruta:string="/cinema";
+  usuario:string = "";
+  ruta:string = "";
+  usuarioCliente:boolean = false;
 
-  constructor() { }
+  constructor(private service:CinetecService) { }
 
   ngOnInit(): void {   
-  console.log(this.ruta)
+    this.service.tipousuario.subscribe(u => {this.usuario = u});
+    this.setRuta();
+  }
+
+  setRuta(){
+    if (this.usuario == "Cliente"){
+      this.ruta = "/cinema";
+      this.usuarioCliente = true;
+    }
+    else if(this.usuario == "Admin"){
+      this.ruta = "/empleados";
+    }
+
   }
   
-  reciveRuta(ruta:string){
-    console.log("ruta cambiada")
-    this.ruta = ruta
-  }
 
 }

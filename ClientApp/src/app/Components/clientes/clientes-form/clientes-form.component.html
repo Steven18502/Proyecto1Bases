@@ -1,0 +1,159 @@
+<h1>AgregarCliente</h1>
+<form class="form-horizontal" novalidate
+        
+      (ngSubmit)="save()" [formGroup]="formGroup">
+  <fieldset>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.ccedula.touched || f.ccedula.dirty) && !f.ccedula.valid }">
+      <label class="col-md-2 control-label"
+             for="ccedulaId">Cédula</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="ccedulaId"
+               type="text"
+               required
+               formControlName="ccedula" />
+        <span class="help-block" *ngIf="(f.ccedula.touched || f.ccedula.dirty) && f.ccedula.errors">
+          <span *ngIf="f.ccedula.errors && f.ccedula.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.cusuario.touched || f.cusuario.dirty) && !f.cusuario.valid }">
+      <label class="col-md-2 control-label"
+             for="cusuarioId">Usuario</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="cusuarioId"
+               type="text"
+               required
+               formControlName="cusuario" />
+        <span class="help-block" *ngIf="(f.cusuario.touched || f.cusuario.dirty) && f.cusuario.errors">
+          <span *ngIf="f.cusuario.errors && f.cusuario.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.ccontrasenia.touched || f.ccontrasenia.dirty) && !f.ccontrasenia.valid }">
+      <label class="col-md-2 control-label"
+             for="ccontraseniaId">Contraseña</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="contraseniaId"
+               type="text"
+               required
+               formControlName="ccontrasenia" />
+        <span class="help-block" *ngIf="(f.ccontrasenia.touched || f.ccontrasenia.dirty) && f.ccontrasenia.errors">
+          <span *ngIf="f.ccontrasenia.errors && f.ccontrasenia.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.cnombre_completo.touched || f.cnombre_completo.dirty) && !f.cnombre_completo.valid }">
+      <label class="col-md-2 control-label"
+             for="cnombre_completoId">Nombre Completo</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="cnombre_completoId"
+               type="text"
+               required
+               formControlName="cnombre_completo" />
+        <span class="help-block" *ngIf="(f.cnombre_completo.touched || f.cnombre_completo.dirty) && f.cnombre_completo.errors">
+          <span *ngIf="f.cnombre_completo.errors && f.cnombre_completo.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.cedad.touched || f.cedad.dirty) && !f.cedad.valid }">
+      <label class="col-md-2 control-label"
+             for="cedadId">Edad</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="cedadId"
+               type="number"
+               required
+               formControlName="cedad" />
+        <span class="help-block" *ngIf="(f.cedad.touched || f.cedad.dirty) && f.cedad.errors">
+          <span *ngIf="f.cedad.errors && f.cedad.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.cfecha_nacimiento.touched || f.cfecha_nacimiento.dirty) && !f.cfecha_nacimiento.valid }">
+      <label class="col-md-2 control-label"
+             for="cfecha_nacimientoId">Fecha de nacimiento</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="cfecha_nacimientoId"
+               type="date"
+               required
+               formControlName="cfecha_nacimiento" />
+        <span class="help-block" *ngIf="(f.cfecha_nacimiento.touched || f.cfecha_nacimiento.dirty) && f.cfecha_nacimiento.errors">
+          <span *ngIf="f.cfecha_nacimiento.errors && f.cfecha_nacimiento.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.ctelefono.touched || f.ctelefono.dirty) && !f.ctelefono.valid }">
+      <label class="col-md-2 control-label"
+             for="ctelefonoId">Teléfono</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="ctelefonoId"
+               type="text"
+               required
+               formControlName="ctelefono" />
+        <span class="help-block" *ngIf="(f.ctelefono.touched || f.ctelefono.dirty) && f.ctelefono.errors">
+          <span *ngIf="f.ctelefono.errors && f.ctelefono.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-4 col-md-offset-2">
+        <span>
+          <button class="btn btn-primary"
+                  type="submit"
+                  [disabled]="!formGroup.valid">
+            Guardar
+          </button>
+          <button class="btn"
+                  type="button"
+                  [routerLink]='["/clientes"]'>
+            Cancelar
+          </button>
+        </span>
+
+      </div>
+
+    </div>
+  </fieldset>
+</form>
