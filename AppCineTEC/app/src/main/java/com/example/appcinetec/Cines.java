@@ -31,35 +31,9 @@ public class Cines extends AppCompatActivity {
 
     }
 
-    public void ContinuarPrueba(View view) {
-        String seleccion = spinner.getSelectedItem().toString();
-        String peliculas[];
-        peliculas = new String[3];
-        if (seleccion.equals("Cartago")) {
-            peliculas[0]="Iron man";
-            peliculas[1]="Spiderman";
-            peliculas[2]="Fast and Furious";
-            Toast.makeText(this, "sirve1",Toast.LENGTH_LONG ).show();
-        }
-        else if (seleccion.equals("San Jose")) {
-            peliculas[0]="Iron man2";
-            peliculas[1]="Spiderman2";
-            peliculas[2]="Fast and Furious2";
-            Toast.makeText(this, "sirve2",Toast.LENGTH_LONG ).show();
-        }
-        else if (seleccion.equals("Heredia")){
-            peliculas[0]="Iron man3";
-            peliculas[1]="Spiderman3";
-            peliculas[2]="Fast and Furious3";
-            Toast.makeText(this, "sirve3",Toast.LENGTH_LONG ).show();
-        }
 
-        for (int i=0;i<peliculas.length;i++){
-        Toast.makeText(this, peliculas[i].toString(),Toast.LENGTH_LONG ).show();
-        }
 
-    }
-
+//metodo que se encarga de pasar el nombre del cine seleccionado al siguiente activity
     public void Continuar(View view) {
         String seleccion = spinner.getSelectedItem().toString();
 

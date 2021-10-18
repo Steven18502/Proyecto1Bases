@@ -31,24 +31,24 @@ public class Proyecciones extends AppCompatActivity {
         String proyecciones[];
         proyecciones = new String[3];
         if (Pelicula.equals("Iron man")) {
-            proyecciones[0]="1:00 pm";
-            proyecciones[1]="2:00 pm";
-            proyecciones[2]="3:00 pm";
-            //Toast.makeText(this, "sirve1",Toast.LENGTH_LONG ).show();
+            proyecciones[0]="1:00 pm Sala 2";
+            proyecciones[1]="2:00 pm Sala 3";
+            proyecciones[2]="3:00 pm Sala 2";
+
 
         }
         else if (Pelicula.equals("Spiderman")) {
             proyecciones[0]="4:00 pm";
             proyecciones[1]="5:00 pm";
             proyecciones[2]="6:00 pm";
-            //Toast.makeText(this, "sirve2",Toast.LENGTH_LONG ).show();
+
 
         }
         else if (Pelicula.equals("Fast and Furious")){
             proyecciones[0]="7:00 pm";
             proyecciones[1]="8:00 pm";
             proyecciones[2]="9:00 pm";
-            //Toast.makeText(this, "sirve3",Toast.LENGTH_LONG ).show();
+
 
         }
         return proyecciones;
