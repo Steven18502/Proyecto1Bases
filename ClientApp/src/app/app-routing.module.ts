@@ -78,6 +78,7 @@ const routes: Routes = [
     path: "asientos",
     component: AsientosComponent
   },
+  
   {
     path: "salida",
     component: ExitpageComponent

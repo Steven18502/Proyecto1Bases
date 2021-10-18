@@ -20,7 +20,6 @@ namespace Proyecto1Bases.Data
         public DbSet<Sucursal> Sucursales { get; init; }
         public DbSet<Sala> Salas { get; init; }
         public DbSet<Proyeccion> Proyecciones { get; init; }
-        public DbSet<Factura> Facturas { get; init; }
 
     }
 }

@@ -15,7 +15,6 @@ namespace Proyecto1Bases.Data
         DbSet<Sucursal> Sucursales { get; init; }
         DbSet<Sala> Salas { get; init; }
         DbSet<Proyeccion> Proyecciones { get; init; }
-        DbSet<Factura> Facturas { get; init; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }
