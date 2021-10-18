@@ -190,7 +190,7 @@ namespace Proyecto1Bases.Controllers
 
             //Se carga un xml desde una plantilla y se editan los nodos correspondientes para que contega la informacion de la compra
             XmlDocument docxml = new XmlDocument();
-            docxml.Load("/home/chago/Documents/Bases/Proyecto1Bases/FacturaPlantilla.xml");           
+            docxml.Load("/home/chago/Documents/Bases/Proyecto1Bases/Factura/Plantilla.xml");           
             XmlNode clave = docxml.DocumentElement.FirstChild;
             clave.InnerText = "12121121312";
             XmlNode nombreEmisor = clave.NextSibling;
@@ -206,7 +206,7 @@ namespace Proyecto1Bases.Controllers
             XmlNode montoImpuesto = detalleM.NextSibling;
             XmlNode total = montoImpuesto.NextSibling;
             total.InnerText = "10000";
-            docxml.Save("/home/chago/Documents/Bases/Proyecto1Bases/Factura" + nombreArchivo + ".xml");
+            docxml.Save("/home/chago/Documents/Bases/Proyecto1Bases/Factura/" + nombreArchivo + ".xml");
 
             // Se crea un mensaje email con el correo de salida y el de entrada
             MailMessage mmesage = new MailMessage("basesdatoss2@gmail.com","steven18502@gmail.com");
