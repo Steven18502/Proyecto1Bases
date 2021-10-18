@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PeliculasFormComponent implements OnInit {
 
-  // Injectar el Form Builder, que permite construir el modelo que representa los campos del formulario
+  // Inyectar el Form Builder, que permite construir el modelo que representa los campos del formulario
   constructor(private fb: FormBuilder,
     private peliculasService : PeliculasService,
     private router: Router,
@@ -19,21 +19,21 @@ export class PeliculasFormComponent implements OnInit {
 
     // variable que dice si se encuentra en modo edicion o no
     modoEdicion: boolean = false;
-    formGroup: FormGroup;
     peliculaId: string;
 
-  ngOnInit() {
-
     // Modelo del formulario
-    this.formGroup = this.fb.group({
+    formGroup = new FormGroup({
       pnombre_original: new FormControl('', [Validators.required]),
       pnombre: new FormControl('', [Validators.required]),
       pduracion: new FormControl('', [Validators.required]),
       director: new FormControl('', [Validators.required]),
       clasificacion: new FormControl('', [Validators.required]),
-      protagonistas: new FormControl('', [Validators.required])
+      protagonistas: new FormControl('', [Validators.required]),
+      pimagen: new FormControl('', [Validators.required])
     });
 
+  ngOnInit() {
+    
   this.activatedRoute.params.subscribe(params => {
     if (params["pnombre_original"] == undefined) {
       return; 
@@ -41,9 +41,10 @@ export class PeliculasFormComponent implements OnInit {
 
       this.modoEdicion = true;
 
-      this.peliculaId = params["pnombre_original"];
+      //this.peliculaId = params["pnombre_original"];
+      this.peliculaId = "pnombre_original";
 
-      this.peliculasService.getPelicula(this.peliculaId.toString())
+      this.peliculasService.getPelicula(this.peliculaId)
         .subscribe(pelicula => this.cargarFormulario(pelicula),
         error => this.router.navigate(["/peliculas"]));
     });
@@ -56,14 +57,14 @@ export class PeliculasFormComponent implements OnInit {
   }
 
   cargarFormulario(pelicula: IPelicula) {
-    this.formGroup.patchValue({
+    this.formGroup.setValue({
       pnombre_original: pelicula.pnombre_original,
       pnombre: pelicula.pnombre,
       pduracion: pelicula.pduracion,
       director: pelicula.director,
       clasificacion: pelicula.clasificacion,
-      protagonistas: pelicula.protagonistas
-    
+      protagonistas: pelicula.protagonistas,
+      pimagen: pelicula.pimagen
     });
   }
 

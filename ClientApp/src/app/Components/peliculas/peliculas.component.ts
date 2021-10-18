@@ -15,6 +15,16 @@ export class PeliculasComponent implements OnInit {
   constructor(private peliculasService: PeliculasService) { }
 
   ngOnInit(): void {
+    this.cargarData();
+  }
+
+  delete(pelicula: IPelicula) {
+    this.peliculasService.deletePelicula(pelicula.pnombre_original)
+      .subscribe(pelicula => this.cargarData(),
+        error => console.error(error));
+  }
+
+  cargarData() {
     this.peliculasService.getPeliculas()
      .subscribe(peliculasFromWS => this.peliculas = peliculasFromWS,
             error => console.error(error));

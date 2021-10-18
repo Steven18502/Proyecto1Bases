@@ -19,6 +19,8 @@ namespace Proyecto1Bases.Data
         public DbSet<Empleado> Empleados { get; init; }
         public DbSet<Sucursal> Sucursales { get; init; }
         public DbSet<Sala> Salas { get; init; }
+        public DbSet<Proyeccion> Proyecciones { get; init; }
+        public DbSet<Factura> Facturas { get; init; }
 
     }
 }

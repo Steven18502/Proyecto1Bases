@@ -1,3 +1,6 @@
+import { DatosFacturaService } from './../../datos-factura.service';
+import { ISucursal } from './../sucursales/sucursal';
+import { SucursalesService } from '../sucursales/sucursales.service';
 import { CinetecService } from 'src/app/cinetec.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,13 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CinemaComponent implements OnInit {
 
-  cinemas: string[] = ["San Pedro","Occidente","Plaza"];
+  sucursales: ISucursal[] = [];
   cinema_actual: string = "";
 
-  constructor(private service:CinetecService) { }
+  constructor(private sucursalesService: SucursalesService, private service:CinetecService,
+      private datosFactura: DatosFacturaService) { }
 
   ngOnInit(): void {
-
+    this.sucursalesService.getSucursales()
+     .subscribe(sucursalesFromWS => this.sucursales = sucursalesFromWS,
+            error => console.error(error));
   }
 
   seleccionar(cinema:string){

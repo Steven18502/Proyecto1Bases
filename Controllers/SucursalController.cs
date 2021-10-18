@@ -29,7 +29,7 @@ namespace Proyecto1Bases.Controllers
             return Ok(sucursals);
         }
     
-        [HttpGet("api/{nombre_cine}")]
+        [HttpGet("{nombre_cine}")]
         public async Task<ActionResult<Sucursal>> GetSucursal(string nombre_cine)
         {
             var sucursal = await _sucursalRepository.Get(nombre_cine);
@@ -53,14 +53,14 @@ namespace Proyecto1Bases.Controllers
             return Ok();
         }
     
-        [HttpDelete("api/{nombre_cine}")]
+        [HttpDelete("{nombre_cine}")]
         public async Task<ActionResult> DeleteSucursal(string nombre_cine)
         {
             await _sucursalRepository.Delete(nombre_cine);
             return Ok();
         }
     
-        [HttpPut("api/{nombre_cine}")]
+        [HttpPut("{nombre_cine}")]
         public async Task<ActionResult> UpdateSucursal(string nombre_cine, UpdateSucursalDto updateSucursalDto)
         {
             Sucursal sucursal = new()

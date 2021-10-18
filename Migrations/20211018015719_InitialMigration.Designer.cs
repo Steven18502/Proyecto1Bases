@@ -10,7 +10,7 @@ using Proyecto1Bases.Data;
 namespace Proyecto1Bases.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211013070743_InitialMigration")]
+    [Migration("20211018015719_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -106,6 +106,27 @@ namespace Proyecto1Bases.Migrations
                     b.HasKey("pnombre_original");
 
                     b.ToTable("Peliculas");
+                });
+
+            modelBuilder.Entity("Proyecto1Bases.Models.Proyeccion", b =>
+                {
+                    b.Property<int>("proyeccionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("cine")
+                        .HasColumnType("text");
+
+                    b.Property<string>("horario")
+                        .HasColumnType("text");
+
+                    b.Property<string>("sala")
+                        .HasColumnType("text");
+
+                    b.HasKey("proyeccionId");
+
+                    b.ToTable("Proyecciones");
                 });
 
             modelBuilder.Entity("Proyecto1Bases.Models.Sala", b =>

@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Proyecto1Bases.Migrations
 {
@@ -60,6 +61,21 @@ namespace Proyecto1Bases.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Proyecciones",
+                columns: table => new
+                {
+                    proyeccionId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    horario = table.Column<string>(type: "text", nullable: true),
+                    cine = table.Column<string>(type: "text", nullable: true),
+                    sala = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Proyecciones", x => x.proyeccionId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Salas",
                 columns: table => new
                 {
@@ -98,6 +114,9 @@ namespace Proyecto1Bases.Migrations
 
             migrationBuilder.DropTable(
                 name: "Peliculas");
+
+            migrationBuilder.DropTable(
+                name: "Proyecciones");
 
             migrationBuilder.DropTable(
                 name: "Salas");

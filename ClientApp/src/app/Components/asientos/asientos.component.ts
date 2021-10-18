@@ -13,6 +13,7 @@ export class AsientosComponent implements OnInit {
   pelicula:string = "";
   cinema:string = "";
   sala:string = "";
+  cant: number = 0;
 
   constructor(private service:CinetecService) { }
 
@@ -58,9 +59,11 @@ export class AsientosComponent implements OnInit {
   seleccionar(x:number,y:number){ 
     if (this.asientosAux[x][y] == 0){
       this.asientosAux[x][y] = 1;
+      this.cant++
     }
     else if (this.asientosAux[x][y] == 1){
       this.asientosAux[x][y] = 0;
+      this.cant--
     }
   };
 

@@ -11,8 +11,8 @@
           *Seleccionar*
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" >
-            <li *ngFor = "let cinema of cinemas">
-                <a class="dropdown-item" (click)="seleccionar(cinema)">{{cinema}}</a>
+            <li *ngFor = "let sucursal of sucursales">
+                <a class="dropdown-item" (click)="seleccionar(sucursal.nombre_cine)">{{sucursal.nombre_cine}}</a>
             </li>
         </ul>
     </div>

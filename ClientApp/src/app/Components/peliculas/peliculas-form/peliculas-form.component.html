@@ -117,6 +117,25 @@
       </div>
     </div>
 
+    <div class="form-group"
+         [ngClass]="{'has-error': (f.pimagen.touched || f.pimagen.dirty) && !f.pimagen.valid }">
+      <label class="col-md-2 control-label"
+             for="pimagenId">Link de la imagen</label>
+
+      <div class="col-md-8">
+        <input class="form-control"
+               id="pimagenId"
+               type="text"
+               required
+               formControlName="pimagen" />
+        <span class="help-block" *ngIf="(f.pimagen.touched || f.pimagen.dirty) && f.pimagen.errors">
+          <span *ngIf="f.pimagen.errors && f.pimagen.errors.required">
+            El campo es obligatorio
+          </span>
+        </span>
+      </div>
+    </div>
+
     <div class="form-group">
       <div class="col-md-4 col-md-offset-2">
         <span>

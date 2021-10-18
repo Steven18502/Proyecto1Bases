@@ -29,7 +29,7 @@ namespace Proyecto1Bases.Controllers
             return Ok(salas);
         }
     
-        [HttpGet("api/{sid}")]
+        [HttpGet("{sid}")]
         public async Task<ActionResult<Sala>> GetSala(string sid)
         {
             var sala = await _salaRepository.Get(sid);
@@ -55,14 +55,14 @@ namespace Proyecto1Bases.Controllers
             return Ok();
         }
     
-        [HttpDelete("api/{sid}")]
+        [HttpDelete("{sid}")]
         public async Task<ActionResult> DeleteSala(string sid)
         {
             await _salaRepository.Delete(sid);
             return Ok();
         }
     
-        [HttpPut("api/{sid}")]
+        [HttpPut("{sid}")]
         public async Task<ActionResult> UpdateSala(string sid, UpdateSalaDto updateSalaDto)
         {
             Sala sala = new()

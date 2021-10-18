@@ -76,7 +76,7 @@
                                 <td>{{pelicula.pimagen}}</td>
                                 <td>
                                     <button class="btn btn-primary" [routerLink]='["/peliculas-editar/" + pelicula.pnombre_original]'>Editar</button>
-                                    <button class ="btn btn-danger">Borrar</button>
+                                    <button class ="btn btn-danger" (click)="delete(pelicula)">Borrar</button>
                                 </td>
                             </tr>
                         </tbody>

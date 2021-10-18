@@ -29,7 +29,7 @@ namespace Proyecto1Bases.Controllers
             return Ok(clientes);
         }
     
-        [HttpGet("api/{ccedula}")]
+        [HttpGet("{ccedula}")]
         public async Task<ActionResult<Cliente>> GetCliente(string ccedula)
         {
             var cliente = await _clienteRepository.Get(ccedula);
@@ -57,14 +57,14 @@ namespace Proyecto1Bases.Controllers
             return Ok();
         }
     
-        [HttpDelete("api/{ccedula}")]
+        [HttpDelete("{ccedula}")]
         public async Task<ActionResult> DeleteCliente(string ccedula)
         {
             await _clienteRepository.Delete(ccedula);
             return Ok();
         }
     
-        [HttpPut("api/{ccedula}")]
+        [HttpPut("{ccedula}")]
         public async Task<ActionResult> UpdateCliente(string ccedula, UpdateClienteDto updateClienteDto)
         {
             Cliente cliente = new()
@@ -82,5 +82,7 @@ namespace Proyecto1Bases.Controllers
             return Ok();
     
         }
+
+        
     }
 }

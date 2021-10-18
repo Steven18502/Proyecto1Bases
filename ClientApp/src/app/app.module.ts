@@ -1,3 +1,4 @@
+import { ProyeccionesService } from './Components/proyeccion/proyecciones.service';
 import { PeliculasFormComponent } from './Components/peliculas/peliculas-form/peliculas-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -25,6 +26,7 @@ import { ClientesFormComponent } from './Components/clientes/clientes-form/clien
 import { ClientinfoComponent } from './Components/clientinfo/clientinfo.component';
 import { ExitpageComponent } from './Components/exitpage/exitpage.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { SucursalesService } from './Components/sucursales/sucursales.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [PeliculasService],
+  providers: [PeliculasService, SucursalesService, ProyeccionesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -32,6 +32,7 @@ namespace Proyecto1Bases
             services.AddScoped<IEmpleadoRepository, EmpleadoRepository>();
             services.AddScoped<ISucursalRepository, SucursalRepository>();
             services.AddScoped<ISalaRepository, SalaRepository>();
+            services.AddScoped<IProyeccionRepository, ProyeccionRepository>();
 
             services.AddControllers();
 

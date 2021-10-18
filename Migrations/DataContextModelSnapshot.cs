@@ -106,6 +106,27 @@ namespace Proyecto1Bases.Migrations
                     b.ToTable("Peliculas");
                 });
 
+            modelBuilder.Entity("Proyecto1Bases.Models.Proyeccion", b =>
+                {
+                    b.Property<int>("proyeccionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("cine")
+                        .HasColumnType("text");
+
+                    b.Property<string>("horario")
+                        .HasColumnType("text");
+
+                    b.Property<string>("sala")
+                        .HasColumnType("text");
+
+                    b.HasKey("proyeccionId");
+
+                    b.ToTable("Proyecciones");
+                });
+
             modelBuilder.Entity("Proyecto1Bases.Models.Sala", b =>
                 {
                     b.Property<string>("sid")
