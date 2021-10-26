@@ -29,10 +29,10 @@ namespace Proyecto1Bases.Controllers
             return Ok(proyecciones);
         }
     
-        [HttpGet("{proyeccionId}")]
-        public async Task<ActionResult<Proyeccion>> GetProyeccion(int proyeccionId)
+        [HttpGet("{proyeccionid}")]
+        public async Task<ActionResult<Proyeccion>> GetProyeccion(int proyeccionid)
         {
-            var proyeccion = await _proyeccionRepository.Get(proyeccionId);
+            var proyeccion = await _proyeccionRepository.Get(proyeccionid);
             if(proyeccion == null)
                 return NotFound();
     
@@ -45,7 +45,7 @@ namespace Proyecto1Bases.Controllers
         {
             Proyeccion proyeccion = new()
             {
-                //proyeccionId = createProyeccionDto.proyeccionId,
+                //proyeccionid = createProyeccionDto.proyeccionid,
                 horario = createProyeccionDto.horario,
                 cine = createProyeccionDto.cine,
                 sala = createProyeccionDto.sala
@@ -55,15 +55,15 @@ namespace Proyecto1Bases.Controllers
             return Ok();
         }
     
-        [HttpDelete("{proyeccionId}")]
-        public async Task<ActionResult> DeleteProyeccion(int proyeccionId)
+        [HttpDelete("{proyeccionid}")]
+        public async Task<ActionResult> DeleteProyeccion(int proyeccionid)
         {
-            await _proyeccionRepository.Delete(proyeccionId);
+            await _proyeccionRepository.Delete(proyeccionid);
             return Ok();
         }
     
-        [HttpPut("{proyeccionId}")]
-        public async Task<ActionResult> UpdateProyeccion(int proyeccionId, UpdateProyeccionDto updateProyeccionDto)
+        [HttpPut("{proyeccionid}")]
+        public async Task<ActionResult> UpdateProyeccion(int proyeccionid, UpdateProyeccionDto updateProyeccionDto)
         {
             Proyeccion proyeccion = new()
             {

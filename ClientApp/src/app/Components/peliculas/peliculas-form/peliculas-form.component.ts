@@ -40,9 +40,10 @@ export class PeliculasFormComponent implements OnInit {
     }
 
       this.modoEdicion = true;
+      console.log(this.modoEdicion);
 
-      //this.peliculaId = params["pnombre_original"];
-      this.peliculaId = "pnombre_original";
+      this.peliculaId = params["pnombre_original"];
+      //this.peliculaId = "pnombre_original";
 
       this.peliculasService.getPelicula(this.peliculaId)
         .subscribe(pelicula => this.cargarFormulario(pelicula),
@@ -58,6 +59,7 @@ export class PeliculasFormComponent implements OnInit {
 
   cargarFormulario(pelicula: IPelicula) {
     this.formGroup.setValue({
+      
       pnombre_original: pelicula.pnombre_original,
       pnombre: pelicula.pnombre,
       pduracion: pelicula.pduracion,
@@ -65,21 +67,10 @@ export class PeliculasFormComponent implements OnInit {
       clasificacion: pelicula.clasificacion,
       protagonistas: pelicula.protagonistas,
       pimagen: pelicula.pimagen
+
     });
   }
 
-  /*
-  ngOnInit(): void {
-    this.formGroup = this.fb.group({
-      pnombre_original: '',
-      pnombre: '',
-      pduracion: '',
-      director: '',
-      clasificacion: '',
-      protagonistas: ''
-    });
-  }
-  */
 
   save() {
     // Se crea un objeto de tipo IPelicula a partir del valor del formulario

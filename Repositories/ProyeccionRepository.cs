@@ -21,9 +21,9 @@ namespace Proyecto1Bases.Repositories
             await _context.SaveChangesAsync();
         }
     
-        public async Task Delete(int proyeccionId)
+        public async Task Delete(int proyeccionid)
         {
-            var itemToRemove = await _context.Proyecciones.FindAsync(proyeccionId);
+            var itemToRemove = await _context.Proyecciones.FindAsync(proyeccionid);
             if (itemToRemove == null)
                 throw new NullReferenceException();
             
@@ -32,9 +32,9 @@ namespace Proyecto1Bases.Repositories
             await _context.SaveChangesAsync();
         }
     
-        public async Task<Proyeccion> Get(int proyeccionId)
+        public async Task<Proyeccion> Get(int proyeccionid)
         {
-            return await _context.Proyecciones.FindAsync(proyeccionId);
+            return await _context.Proyecciones.FindAsync(proyeccionid);
         }
     
         public async Task<IEnumerable<Proyeccion>> GetAll()
@@ -44,7 +44,7 @@ namespace Proyecto1Bases.Repositories
     
         public async Task Update(Proyeccion proyeccion)
         {
-            var itemToUpdate = await _context.Proyecciones.FindAsync(proyeccion.proyeccionId);
+            var itemToUpdate = await _context.Proyecciones.FindAsync(proyeccion.proyeccionid);
             if (itemToUpdate == null)
                 throw new NullReferenceException();
             itemToUpdate.horario = proyeccion.horario;

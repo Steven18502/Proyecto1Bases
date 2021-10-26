@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g0cHBPDzd+y4r2DIzrA+nWTemkAhsMod2UsATcKBMf9cQFuAEfE3eqPzAZiWKVQdrUxqingPiG5/YXJsPj6pIA==",
+  "dgSpecHash": "liux8Zn1iIerocdw5GxDpLMvH+iJGPvwMgAPtH8ArIjmrJIS7sqNwTOHk7d8ZCi0X6N3MlVLaJ7CZ9Q0Vn0n9g==",
   "success": true,
-  "projectFilePath": "/home/chago/Documents/Bases/Proyecto1Bases/Proyecto1Bases.csproj",
+  "projectFilePath": "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases.csproj",
   "expectedPackageFiles": [
     "/home/chago/.nuget/packages/common.logging/3.4.1/common.logging.3.4.1.nupkg.sha512",
     "/home/chago/.nuget/packages/common.logging.core/3.4.1/common.logging.core.3.4.1.nupkg.sha512",

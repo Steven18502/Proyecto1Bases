@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/chago/Documents/Bases/Proyecto1Bases/Proyecto1Bases.csproj": {}
+    "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases.csproj": {}
   },
   "projects": {
-    "/home/chago/Documents/Bases/Proyecto1Bases/Proyecto1Bases.csproj": {
+    "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/chago/Documents/Bases/Proyecto1Bases/Proyecto1Bases.csproj",
+        "projectUniqueName": "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases.csproj",
         "projectName": "Proyecto1Bases",
-        "projectPath": "/home/chago/Documents/Bases/Proyecto1Bases/Proyecto1Bases.csproj",
+        "projectPath": "/home/chago/Documents/GitHub/Proyecto1Bases/Proyecto1Bases.csproj",
         "packagesPath": "/home/chago/.nuget/packages/",
-        "outputPath": "/home/chago/Documents/Bases/Proyecto1Bases/obj/",
+        "outputPath": "/home/chago/Documents/GitHub/Proyecto1Bases/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/chago/.nuget/NuGet/NuGet.Config"

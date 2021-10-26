@@ -15,8 +15,8 @@ export class PeliculasService {
     return this.http.get<IPelicula[]>(this.url + "peliculas");
   }
 
-  getPelicula (peliculaId: string): Observable<IPelicula> {
-    return this.http.get<IPelicula>(this.url + "peliculas" + '/' + peliculaId);
+  getPelicula(peliculaId: string): Observable<IPelicula> {
+    return this.http.get<IPelicula>(this.url + "peliculas" + "/" + peliculaId);
   }
 
   // Metodo para crear una pelicula proveniente de la web
